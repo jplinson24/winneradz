@@ -2956,3 +2956,25 @@ a:visited {
   transition: all .2s;
   box-shadow: 0 0 27px 2px #bdc4c9;
 }
+
+/*
+* Section styles
+*/
+.section.no-top-space.bg-gradient-1 {
+  background-image: linear-gradient(270deg, #0fbf95, #0087ee);
+}
+.section.bg-gradient-1 {
+  background-image: linear-gradient(270deg, #0fbf95, #0087ee);
+}
+.section.no-top-space {
+  padding-top: 0;
+}
+.bg-gradient-1 {
+  color: #fff;
+  background-image: linear-gradient(270deg, #0fbf95, #0087ee);
+}
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  position: relative;
+}
