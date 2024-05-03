@@ -1628,6 +1628,12 @@ a:visited {
 .footer-widget__logo {
   margin-bottom: 40px;
 }
+.right-side-box {
+  display: flex; /* Ensure the box is using flexbox */
+  align-items: center;
+  justify-content: center; /* Center the button horizontally */
+}
+
 
 /*
 * 7. inner-banner styles
@@ -1893,6 +1899,9 @@ a:visited {
   /* Firefox 18- */
   color: #fff;
 }
+
+
+
 
 .mc-form__response p {
   background-color: #fff;
