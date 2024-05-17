@@ -2993,3 +2993,28 @@ a:visited {
   padding-bottom: 96px;
   position: relative;
 }
+
+
+ /* Form Style */
+ .form-container {
+  align-items: center;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%; /* Adjust width as needed */
+  height: 50%; /* Adjust height as needed */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+}
+
+
+/* Form */
+.form {
+z-index: 10;
+width: 50%;
+height: 50%;
+left: 10px;
+}

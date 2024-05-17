@@ -62,11 +62,43 @@
                             </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
+
                     <div class="right-side-box">
-                        <a class="thm-btn header__cta-btn" href="#"><span>Get Started</span></a>
+                        <a class="thm-btn header__cta-btn" href="#" id="getStartedButton"><span>Get Started</span></a>
                     </div><!-- /.right-side-box -->
-                </div>
-                <!-- /.container -->
+
+                    <div class="form-container" id="formContainer">
+                       <div class="form">
+                        <h3> Let's get in Touch!! </h3>
+                        <p>If you love to Program & Develop new things as much as I do. Lets talk about how to Merge & Build new Projects !!</p>
+                       </div>
+                       <!--FORM-->
+                       <div class="input-container">
+                        <input type="text" name="name" class="input" />
+                        <label for=""> Username </label>
+                         <span> Username </span>
+
+                         <div class="input-container">
+                            <input type="email" name="email" class="input" />
+                            <label for=""> Email </label>
+                            <span> Email </span>
+                          </div>
+
+                          <div class="input-container">
+                            <input type="tel" name="phone" class="input" />
+                            <label for=""> Phone </label>
+                            <span> Phone </span>
+                          </div>
+
+                          <div class="input-container textarea">
+                            <textarea name="message" class="input"></textarea>
+                            <label for=""> Message </label>
+                            <span> Message </span>
+                          </div>
+                         <!--FORM-->
+                     </div>
+                    </div>
+                    </div> <!-- The Form -->
             </nav>
         </header><!-- /.site-header -->
         <section class="banner-one" id="banner">
@@ -595,7 +627,7 @@
                     <h2 class="block-title__title">Need More? Schedule a Meeting with us.</h2><!-- /.block-title__title -->
                 </div><!-- /.block-title -->
                 <div class="right-side-box">
-                    <a class="thm-btn header__cta-btn" href="#"><span>Get Started</span></a>
+                    <a class="thm-btn header__cta-btn" href="#" onclick="showForm()"><span>Get Started</span></a>
                 </div><!-- /.right-side-box -->
                 <div class="mc-form__response"></div><!-- /.mc-form__response -->
             </div><!-- /.container -->
@@ -668,6 +700,7 @@
     </div><!-- /.page-wrapper -->
 
 
+
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
 
@@ -682,9 +715,10 @@
     <script src="assets/js/jquery.ajaxchimp.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/jquery.easing.min.js"></script>
-
     <!-- template scripts -->
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/formcontainer.js"></script>
+
 </body>
 
 </html>
