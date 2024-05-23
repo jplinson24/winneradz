@@ -73,20 +73,30 @@
                         <!-- Close button -->
 
                         <!-- FORM -->
+                      <!-- FORM -->
                         <div class="input-container">
-                            <input type="text" name="name" class="input" placeholder="Username" />
+                            <p>*Complete Name</p>
+                            <input type="text" name="Complete Name" class="input" placeholder="Complete Name*" required />
                         </div>
                         <div class="input-container">
-                            <input type="email" name="email" class="input" placeholder="Email" />
+                            <p>*Email</p>
+                            <input type="email" name="email" class="input" placeholder="Email*" required />
                         </div>
                         <div class="input-container">
-                            <input type="tel" name="phone" class="input" placeholder="Phone" />
+                            <p>Fill up this form to place an order...</p>
+                            <div class="textarea-container">
+                                <button type="submit" class="submit-btn" formaction="URL_of_your_Google_Form">Order Form</button>
+                            </div>
                         </div>
-                        <div class="input-container textarea">
-                            <textarea name="message" class="input" placeholder="Message"></textarea>
+                        <div class="input-container">
+                            <p>Otherwise,</p>
+                            <div class="textarea-container">
+                                <textarea name="Otherwise, " class="input" placeholder="Feel free to send your inquiry here..."></textarea>
+                            </div>
                         </div>
                         <!-- FORM -->
-                        <button type="submit" class="submit-btn">Submit</button>
+
+                        <button type="submit" class="submit-btn">Send my Inquiry</button>
                         <!-- Submit Button -->
                     </div>
             </nav>
