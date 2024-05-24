@@ -624,10 +624,10 @@ a:visited {
 .banner-one__moc video {
   position: absolute;
   top: 29px; /* Adjusted top position */
-  left: 22px; /* Adjusted left position */
+  left: 24px; /* Adjusted left position */
   width: 89%; /* Adjust the width of the video to fit inside the phone */
   height: auto; /* Automatically adjust height */
-  border-radius: 0px; /* Keep the border-radius as 0 */
+  border-radius: 20px; /* Keep the border-radius as 0 */
 }
 
 @media screen and (max-width: 768px) {
@@ -644,12 +644,18 @@ a:visited {
     display: none; /* Hide the circular background on smaller screens */
   }
   
+  .banner-one__moc img {
+    width: 100%; /* Make the image fill the banner on smaller screens */
+    max-width: none; /* Remove max-width constraint */
+  }
+
   .banner-one__moc video {
     width: 80%; /* Adjusted width for smaller screens */
     top: 20px; /* Adjusted top position for smaller screens */
     left: 10%; /* Adjusted left position for smaller screens */
   }
 }
+
 
 
 
