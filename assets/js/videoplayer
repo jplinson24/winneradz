@@ -1,0 +1,33 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const videoContainers = document.querySelectorAll('.video-container');
+    const videos = document.querySelectorAll('.video-container video');
+    const playButtons = document.querySelectorAll('.play-button');
+    const pauseButtons = document.querySelectorAll('.pause-button');
+
+    function togglePlayPause(videoIndex) {
+        const video = videos[videoIndex];
+        const playButton = playButtons[videoIndex];
+        const pauseButton = pauseButtons[videoIndex];
+
+        if (video.paused) {
+            video.play();
+            playButton.style.opacity = 0;
+            playButton.style.visibility = 'hidden';
+        } else {
+            video.pause();
+            playButton.style.opacity = 1;
+            playButton.style.visibility = 'visible';
+        }
+    }
+
+    playButtons.forEach((playButton, index) => {
+        playButton.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const videoIndex = event.target.dataset.videoId;
+            togglePlayPause(videoIndex);
+        });
+    });
+
+    // Add event listeners for other functionalities if needed
+
+});

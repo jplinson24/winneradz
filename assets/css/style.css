@@ -2177,7 +2177,7 @@ z-index: 4;
 }
 .testimonials-one__single p {
   color: #74727a;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 46px;
   font-weight: 300;
   margin-bottom: 35px;
@@ -2886,7 +2886,7 @@ z-index: 4;
   text-align: center;
   margin-top: 72px;
   margin-bottom: -25vh;
-  padding-bottom: 35px;
+  padding-bottom: 500px;
   position: relative;
 }
 
@@ -3055,3 +3055,5 @@ left: 10px;
 .footer .text-small a:hover {
   text-decoration: underline;
 }
+
+
