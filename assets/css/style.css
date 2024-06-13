@@ -547,8 +547,12 @@ a:visited {
 /*
 * 3. banner styles
 */
-.banner-one video {
-z-index: 4;
+
+@media screen and (max-width: 768px) {
+  .banner-one__content {
+    text-align: center; /* Center align the content */
+    margin-bottom: 20px; /* Add some space between content and video */
+  }
 }
 .banner-one {
   position: relative;
@@ -648,17 +652,25 @@ z-index: 4;
   }
   
   .banner-one__moc img {
-    width: 100%; /* Make the image fill the banner on smaller screens */
-    max-width: none; /* Remove max-width constraint */
+    padding-top: 5px; /* Adjust padding as needed */
+    max-width: 82%; /* Ensure the image fits well within its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures proper block-level display */
+    margin: 0 auto; /* Center the image horizontally */
+    /* Additional styles can be adjusted based on design requirements */
   }
+  
+  
 
   .banner-one__moc video {
-    width: 80%; /* Adjusted width for smaller screens */
-    top: 20px; /* Adjusted top position for smaller screens */
-    left: 10%; /* Adjusted left position for smaller screens */
+    width: 71.5%; /* Ensure the video fills its container width proportionally */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures proper block-level display */
+    margin: -5px auto 0; /* Center the video horizontally */
+    margin-left: 30px;
+    /* Additional styles can be adjusted based on design requirements */
   }
-}
-
+}  
 
 
 
@@ -2881,14 +2893,7 @@ z-index: 4;
 * Container List
 */
 
-.container.hero-screenshot-container {
-  z-index: 3;
-  text-align: center;
-  margin-top: 72px;
-  margin-bottom: -25vh;
-  padding-bottom: 500px;
-  position: relative;
-}
+
 
 .container {
   z-index: 3;
