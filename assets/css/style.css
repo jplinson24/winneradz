@@ -620,60 +620,30 @@ a:visited {
   z-index: 2;
 }
 
-.banner-one__moc .phone-frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+
+/* Adjust the video size */
+.banner-one__moc .video {
+  width: 100%; /* Set the width to 100% to make it responsive */
+  max-width: 390px; /* Optional: Set a maximum width to maintain aspect ratio */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Ensure the video is a block-level element */
+  margin: 70px auto; /* Center the video horizontally */
+  border-radius: 30px; /* Apply rounded corners */
 }
 
-.banner-one__moc video {
-  position: absolute;
-  top: 46px; /* Adjusted top position */
-  left: 28px; /* Adjusted left position */
-  width: 87%; /* Adjust the width of the video to fit inside the phone */
-  height: auto; /* Automatically adjust height */
-  border-radius: 22px; /* Keep the border-radius as 0 */
-}
-
-@media screen and (max-width: 768px) {
-  /* Adjustments for smaller screens (tablets and mobile devices) */
-  .banner-one__moc {
-    bottom: 0; /* Move banner to the bottom of the screen */
-    right: 0; /* Move banner to the right side of the screen */
-    width: 100%; /* Make the banner full width */
-    max-width: none; /* Remove max-width constraint */
-    text-align: center; /* Center align the contents */
+/* Optional: Additional styling for responsiveness */
+@media (max-width: 768px) {
+  .banner-one__moc .video {
+      width: 100%; /* Full width on smaller screens */
+      height: auto; /* Maintain aspect ratio */
   }
+}
+
 
   .banner-one__moc:before {
     display: none; /* Hide the circular background on smaller screens */
   }
   
-  .banner-one__moc img {
-    padding-top: 5px; /* Adjust padding as needed */
-    max-width: 82%; /* Ensure the image fits well within its container */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensures proper block-level display */
-    margin: 0 auto; /* Center the image horizontally */
-    /* Additional styles can be adjusted based on design requirements */
-  }
-  
-  
-
-  .banner-one__moc video {
-    width: 71.5%; /* Ensure the video fills its container width proportionally */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensures proper block-level display */
-    margin: -5px auto 0; /* Center the video horizontally */
-    margin-left: 30px;
-    /* Additional styles can be adjusted based on design requirements */
-  }
-}  
-
-
-
 
 [class*=banner-one__shape-] {
   position: absolute;
@@ -2304,10 +2274,7 @@ a:visited {
 .pricing-one {
   padding-top: 110px;
   padding-bottom: 90px;
-  /* The switch - the box around the slider */
-  /* Hide default HTML checkbox */
-  /* The slider */
-  /* Rounded sliders */
+  text-align: center;
 }
 .pricing-one .switch {
   position: relative;
@@ -2406,6 +2373,7 @@ a:visited {
 .pricing-one__single {
   padding-left: 40px;
   padding-right: 40px;
+  text-align: center;
 }
 .pricing-one__single h3,
 .pricing-one__single p,
@@ -2413,6 +2381,7 @@ a:visited {
 .pricing-one__single span {
   display: block;
   margin: 0;
+  text-align: center;
 }
 .pricing-one__single h3 {
   color: #ff4eb5;
@@ -2436,6 +2405,7 @@ a:visited {
   margin-top: 50px;
   padding-top: 50px;
   margin-bottom: 50px;
+  text-align: center;
 }
 .pricing-one__single ul li {
   color: #74727a;
@@ -2443,6 +2413,7 @@ a:visited {
   font-weight: 400;
   line-height: 1em;
   text-align: left;
+  padding-left: 100px;
 }
 .pricing-one__single ul li + li {
   margin-top: 30px;
@@ -2599,10 +2570,11 @@ a:visited {
 /*
 * 16. service styles
 */
-
 .service-one {
   padding-bottom: 90px;
-  padding-top: 100px;
+   display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Optional: Allows items to wrap onto the next line */
 }
 .service-one .container {
   position: relative;
@@ -2616,10 +2588,6 @@ a:visited {
   padding: 2px;
   position: relative;
   margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
 }
 .service-one__single:before {
   content: '';
@@ -2674,7 +2642,6 @@ a:visited {
   position: relative;
   padding-top: 50px;
   padding-bottom: 35px;
-  width: 100%;
 }
 .service-one__icon {
   width: 108px;
@@ -2697,35 +2664,32 @@ a:visited {
   color: #fff;
   font-size: 70px;
   margin-bottom: 30px;
-  margin: 0 auto 30px;
 }
+
+/* Adjust styles for the first item */
 .service-one [class*=col-]:nth-child(1) .service-one__icon {
   -webkit-box-shadow: 0px 20px 40px 0px rgba(255, 118, 142, 0.8);
-          box-shadow: 0px 20px 40px 0px rgba(255, 118, 142, 0.8);
+  box-shadow: 0px 20px 40px 0px rgba(255, 118, 142, 0.8);
 }
+
+/* Adjust styles for the second item */
 .service-one [class*=col-]:nth-child(2) .service-one__single:before,
 .service-one [class*=col-]:nth-child(2) .service-one__icon {
   background-image: linear-gradient(40deg, #0db8ff 0%, #f332ff 100%);
 }
 .service-one [class*=col-]:nth-child(2) .service-one__icon {
   -webkit-box-shadow: 0px 20px 60px 0px rgba(141, 142, 255, 0.8);
-          box-shadow: 0px 20px 60px 0px rgba(141, 142, 255, 0.8);
+  box-shadow: 0px 20px 60px 0px rgba(141, 142, 255, 0.8);
 }
+
+/* Adjust styles for the third item */
 .service-one [class*=col-]:nth-child(3) .service-one__single:before,
 .service-one [class*=col-]:nth-child(3) .service-one__icon {
   background-image: linear-gradient(40deg, #39aeff 0%, #3cff53 100%);
 }
 .service-one [class*=col-]:nth-child(3) .service-one__icon {
   -webkit-box-shadow: 0px 20px 40px 0px rgba(58, 212, 173, 0.8);
-          box-shadow: 0px 20px 40px 0px rgba(58, 212, 173, 0.8);
-}
-.service-one [class*=col-]:nth-child(4) .service-one__single:before,
-.service-one [class*=col-]:nth-child(4) .service-one__icon {
-  background-image: linear-gradient(40deg, #ff703e 0%, #ffec4e 100%);
-}
-.service-one [class*=col-]:nth-child(4) .service-one__icon {
-  -webkit-box-shadow: 0px 20px 40px 0px rgba(255, 178, 71, 0.8);
-          box-shadow: 0px 20px 40px 0px rgba(255, 178, 71, 0.8);
+  box-shadow: 0px 20px 40px 0px rgba(58, 212, 173, 0.8);
 }
 
 .col-lg-3 {
@@ -2734,12 +2698,14 @@ a:visited {
 }
 
 
+
+
 /*
 * 17. app-shot styles
 */
 .app-shot-one {
-  padding-top: 120px;
-  padding-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 150px;
   position: relative;
 }
 .app-shot-one__bg {
@@ -2751,6 +2717,7 @@ a:visited {
   max-width: 1595px;
   width: 100%;
   position: relative;
+  padding-top: -500px;
 }
 .app-shot-one .app-shot-one__carousel {
   padding-top: 100.5px;
@@ -2810,6 +2777,12 @@ a:visited {
           transform: scale(1.285);
 }
 .app-shot-one .owl-item img {
+  -webkit-transition: -webkit-transform .4s ease;
+  transition: -webkit-transform .4s ease;
+  transition: transform .4s ease;
+  transition: transform .4s ease, -webkit-transform .4s ease;
+}
+.app-shot-one .owl-item video {
   -webkit-transition: -webkit-transform .4s ease;
   transition: -webkit-transform .4s ease;
   transition: transform .4s ease;
