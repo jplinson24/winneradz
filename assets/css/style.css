@@ -2902,14 +2902,13 @@ a:visited {
   margin-bottom: 15px;
 }
 
-.img {
+.w-dyn-item video {
   width: 100%;
   border: 4px solid #e9eef1;
   border-radius: 10px;
   transition: all .2s;
   box-shadow: 0 0 27px 2px #bdc4c9;
 }
-
 /*
 * Section styles
 */
@@ -3034,10 +3033,3 @@ left: 10px;
   text-decoration: underline;
 }
 
-.w-dyn-item video {
-  width: 100%;
-  border: 4px solid #e9eef1;
-  border-radius: 10px;
-  transition: all .2s;
-  box-shadow: 0 0 27px 2px #bdc4c9;
-}
