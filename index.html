@@ -17,6 +17,7 @@
 
     <!-- Preload Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDROjB-0Xlo.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
     <!-- Preload plugin and template styles -->
     <link rel="preload" href="assets/css/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -30,6 +31,18 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preload" href="assets/css/responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="assets/css/form.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- Inline Critical CSS -->
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+        }
+        .cta-one__bg {
+            background-image: url('assets/images/background/cta-one-bg.webp');
+            background-size: cover;
+        }
+        /* Add other critical CSS here */
+    </style>
 
     <!-- Fallback for browsers with JavaScript disabled -->
     <noscript>
@@ -50,7 +63,7 @@
 
 <body>
     <div class="preloader">
-        <img src="assets/images/resources/winneradzpreloader.webp" class="preloader__image" alt="">
+        <img src="assets/images/resources/winneradzpreloader.webp" class="preloader__image" alt="preloader" loading="lazy">
     </div><!-- /.preloader -->
     <div class="page-wrapper">
         <header class="site-header site-header__header-one ">
@@ -59,7 +72,7 @@
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="logo-box clearfix">
                         <a class="navbar-brand" href="index.html">
-                            <img src="assets/images/resources/New Logo 2024.webp" class="main-logo" width="200" alt="Awesome Image" />
+                            <img src="assets/images/resources/New Logo 2024.webp" class="main-logo" width="200" alt="Awesome Image" loading="lazy"/>
                         </a>
                         <button class="menu-toggler" data-target=".main-navigation">
                             <span class="fa fa-bars"></span>
@@ -86,7 +99,7 @@
                     </div><!-- /.navbar-collapse -->
 
                     <div class="right-side-box">
-                        <a class="thm-btn header__cta-btn" href="#" id="getStartedButton"><span>Get Started</span></a>
+                        <a class="thm-btn header__cta-btn show-form-button" href="#"><span>Get Started</span></a>
                     </div><!-- /.right-side-box -->
                     
                     <div class="form-container" id="formContainer">
@@ -132,7 +145,7 @@
                   <div class="banner-one__content">
                     <h3 class="banner-one__title">We Deliver the <br> <span>VIDEOS</span> you <br> Need</h3><!-- /.banner-one__title -->
                     <p class="banner-one__text">Turning <I></I>deas into Sales<br> Creating Powerful Videos for Your E-commerce Success</p><!-- /.banner-one__text -->
-                    <a href="#" class="banner-one__btn thm-btn"><span>Get Started</span></a><!-- /.thm-btn -->
+                    <a class="thm-btn header__cta-btn show-form-button" href="#"><span>Get Started</span></a>
                   </div><!-- /.banner-one__content -->
                 </div><!-- /.col-lg-6 -->
               </div><!-- /.row -->
@@ -148,15 +161,15 @@
 <!-- Icon Pill -->
 <div class="icon-pill-group pill-above">
     <div class="pill icon-pill-group-item bg-gray-3">
-        <img src="assets/images/resources/Sales-Driven Creatives.webp" alt="" loading="eager" class="pill-image">
+        <img src="assets/images/resources/Sales-Driven Creatives.webp" alt="" loading="lazy" class="pill-image">
         <h6 class="pill-heading v2">Sales-Driven Creatives&amp; GIFs</h6>
     </div>
     <div class="pill icon-pill-group-item bg-gray-3">
-        <img src="assets/images/resources/Super-fast 24-hour turnaround.webp" alt="" loading="eager" class="pill-image">
+        <img src="assets/images/resources/Super-fast 24-hour turnaround.webp" alt="" loading="lazy" class="pill-image">
         <h6 class="pill-heading v2">Superfast 24-hour Turnaround</h6>
     </div>
     <div class="pill icon-pill-group-item bg-gray-3">
-        <img src="assets/images/resources/Proven to convert.webp" alt="" loading="eager" class="pill-image">
+        <img src="assets/images/resources/Proven to convert.webp" alt="" loading="lazy" class="pill-image">
         <h6 class="pill-heading v2">Proven to Convert</h6>
     </div>
 </div>
@@ -167,22 +180,22 @@
     <div class="collection-list-wrapper-4 w-dyn-list">
         <div role="list" class="w-dyn-items">
             <div role="listitem" class="collection-item-3 w-dyn-item">
-                <img alt="" src="./assets/images/gif/Left up.gif" loading="eager" class="img">
+                <img alt="left up" src="./assets/images/gif/Left up.gif" loading="lazy" class="img">
             </div>
             <div role="listitem" class="collection-item-3 w-dyn-item">
-                <img alt="" src="./assets/images/gif/Left down.gif" loading="eager" class="img">
+                <img alt="left down" src="./assets/images/gif/Left down.gif" loading="lazy" class="img">
             </div>
             <div role="listitem" class="collection-item-3 w-dyn-item">
-                <img alt="" src="./assets/images/gif/Center Top.gif" loading="eager" class="img">
+                <img alt="center top" src="./assets/images/gif/Center Top.gif" loading="lazy" class="img">
             </div>
             <div role="listitem" class="collection-item-3 w-dyn-item">
-                <img alt="" src="./assets/images/gif/Center Down.gif" loading="eager" class="img">
+                <img alt="center down" src="./assets/images/gif/Center Down.gif" loading="lazy" class="img">
             </div>
             <div role="listitem" class="collection-item-3 w-dyn-item">
-                <img alt="" src="./assets/images/gif/Right up.gif" loading="eager" class="img">
+                <img alt="right up" src="./assets/images/gif/Right up.gif" loading="lazy" class="img">
             </div>
             <div role="listitem" class="collection-item-3 w-dyn-item">
-                <img alt="" src="./assets/images/gif/right down.gif" loading="eager" class="img">
+                <img alt="right down" src="./assets/images/gif/right down.gif" loading="lazy" class="img">
             </div>
         </div>
     </div>
@@ -190,9 +203,9 @@
 
 
 <section class="cta-one">
-    <img src="assets/images/background/cta-one-bg.webp" class="cta-one__bg" alt="Awesome Image" />
+    <img src="assets/images/background/cta-one-bg.webp" width="1200" height="600" class="cta-one__bg" alt="Awesome Image" loading="lazy">
     <div class="container">
-        <img src="assets/images/resources/Scroll Stopping Video Ads.webp" class="cta-one__moc" alt="Awesome Image" />
+        <img src="assets/images/resources/Scroll Stopping Video Ads.webp" class="cta-one__moc" alt="Awesome Image" loading="lazy"/>
         <div class="row justify-content-lg-end">
             <div class="col-lg-6">
                 <div class="cta-one__content">
@@ -207,7 +220,7 @@
                         <li><i class="fa fa-check"></i>High-quality graphics and visual appeal</li>
                         <li><i class="fa fa-check"></i>Drive engagement and conversions</li>
                     </ul><!-- /.list-unstyled -->
-                    <a href="#" class="thm-btn"><span>Get Started</span></a>
+                    <a class="thm-btn header__cta-btn show-form-button" href="#"><span>Get Started</span></a>
                 </div><!-- /.cta-one__content -->
             </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
@@ -343,7 +356,7 @@
                             </p>
                             <h3>Ivan Chiong</h3>
                             <span>Entrepreneur</span>
-                            <img src="assets/images/testimonials/Chiong Ivan.webp" alt="Awesome Image" height="58px" width="58px"/>
+                            <img src="assets/images/testimonials/Chiong Ivan.webp" alt="Awesome Image" height="58px" width="58px" loading="lazy"/>
                         </div><!-- /.testimonials-one__inner -->
                     </div><!-- /.testimonials-one__single -->
                 </div><!-- /.item -->
@@ -359,7 +372,7 @@
                             </p>
                             <h3>Rheigel Golosino</h3>
                             <span>Entrepreneur</span>
-                            <img src="assets/images/testimonials/Rheigel Golosino.webp" alt="Awesome Image" height="58px" width="58px"/>
+                            <img src="assets/images/testimonials/Rheigel Golosino.webp" alt="Awesome Image" height="58px" width="58px" loading="lazy"/>
                         </div><!-- /.testimonials-one__inner -->
                     </div><!-- /.testimonials-one__single -->
                 </div><!-- /.item -->
@@ -373,7 +386,7 @@
                             </p>
                             <h3>Adrian Pantonial</h3> 
                             <span>Life & Career Coach,</span>
-                            <img src="assets/images/testimonials/Adrian Pantonial .webp" alt="Awesome Image" height="58px" width="58px"/>
+                            <img src="assets/images/testimonials/Adrian Pantonial .webp" alt="Awesome Image" height="58px" width="58px" loading="lazy"/>
                         </div><!-- /.testimonials-one__inner -->
                     </div><!-- /.testimonials-one__single -->
                 </div><!-- /.item -->
@@ -387,7 +400,7 @@
                             </p>
                             <h3>Vanessa O</h3> 
                             <span>Businesswomen and Film Director</span>
-                            <img src="assets/images/testimonials/Vanessa O'Rourke.webp" alt="Awesome Image" height="58px" width="58px"/>
+                            <img src="assets/images/testimonials/Vanessa O'Rourke.webp" alt="Awesome Image" height="58px" width="58px" loading="lazy"/>
                         </div><!-- /.testimonials-one__inner -->
                     </div><!-- /.testimonials-one__single -->
                 </div><!-- /.item -->
@@ -405,33 +418,33 @@
             <div class="container">
                 <div class="brand-one__carousel owl-carousel owl-theme">
                     <div class="item">
-                        <img src="assets/client logos/1. Venom Scent logo black.webp" alt="Venom Scent">
+                        <img src="assets/client logos/1. Venom Scent logo black.webp" alt="Venom Scent" loading="lazy">
                     </div><!-- /.item -->
             
                     <div class="item">
-                        <img src="assets/client logos/2. Homie.webp" alt="Homie">
+                        <img src="assets/client logos/2. Homie.webp" alt="Homie" loading="lazy">
                     </div><!-- /.item -->
                     <div class="item">
-                        <img src="assets/client logos/3. Bloumy.webp" alt="Bloumy">
+                        <img src="assets/client logos/3. Bloumy.webp" alt="Bloumy" loading="lazy">
                     </div><!-- /.item -->
                     <div class="item">
-                        <img src="assets/client logos/4. Synergy.webp" alt="Synergy">
+                        <img src="assets/client logos/4. Synergy.webp" alt="Synergy" loading="lazy">
                     </div><!-- /.item -->
                     <div class="item">
-                        <img src="assets/client logos/5. Femy.webp" alt="Femy">
+                        <img src="assets/client logos/5. Femy.webp" alt="Femy" loading="lazy">
                     </div><!-- /.item -->
                     <div class="item">
-                        <img src="assets/client logos/6. Bliss of Utopia.webp" alt="Bliss of Utopia">
+                        <img src="assets/client logos/6. Bliss of Utopia.webp" alt="Bliss of Utopia" loading="lazy">
                         
                     </div><!-- /.item -->
                     <div class="item">
-                        <img src="assets/client logos/7. Lula.webp" alt="Lula">
+                        <img src="assets/client logos/7. Lula.webp" alt="Lula" loading="lazy">
                     </div><!-- /.item -->
                 </div><!-- /.brand-one__carousel owl-carousel owl-theme -->
             </div><!-- /.container -->
         </div><!-- /.brand-one -->
         <section class="app-shot-one" id="videos">
-            <img src="assets/images/background/app-shot-bg.webp" alt="Awesome Image" class="app-shot-one__bg" />
+            <img src="assets/images/background/app-shot-bg.webp" alt="Awesome Image" class="app-shot-one__bg" loading="lazy"/>
             <div class="container-fluid">
                 <div class="block-title text-center">
                     <h2 class="block-title__title">
@@ -444,7 +457,7 @@
                     </div>
                
 
-                    <img src="assets/images/favicons/66 px height.webp">
+                    <img src="assets/images/favicons/66 px height.webp" loading="lazy"/>
                 </div><!-- /.block-title -->
 
                 <div class="centered-heading">
@@ -488,7 +501,7 @@
         </section><!-- /.app-shot-one -->
 
         <section class="app-shot-one" id="videos">
-            <img src="assets/images/background/app-shot-bg.webp" alt="Awesome Image" class="app-shot-one__bg" />
+            <img src="assets/images/background/app-shot-bg.webp" alt="Awesome Image" class="app-shot-one__bg" loading="lazy"/>
             <div class="container-fluid">
                 <div class="block-title text-center">
                     
@@ -576,7 +589,7 @@
         </section>
         
         <section class="faq-one">
-            <img src="assets/images/background/faq-one-bg.webp" alt="Awesome Image" class="faq-one__bg" />
+            <img src="assets/images/background/faq-one-bg.webp" alt="Awesome Image" class="faq-one__bg" loading="lazy"/>
             <div class="container">
                 <div class="block-title text-center">
                     <h2 class="block-title__title">Why <span>Choose Us?</span></h2><!-- /.block-title__title -->
@@ -660,7 +673,7 @@
                     <h2 class="block-title__title">Need more? Feel free to shoot us your inquiry</h2><!-- /.block-title__title -->
                 </div><!-- /.block-title -->
                 <div class="right-side-box">
-                    <a class="thm-btn header__cta-btn" href="#" onclick="showForm()"><span>Get Started</span></a>
+                    <a class="thm-btn header__cta-btn show-form-button" href="#"><span>Get Started</span></a>
                 </div><!-- /.right-side-box -->
                 <div class="mc-form__response"></div><!-- /.mc-form__response -->
             </div><!-- /.container -->
@@ -673,7 +686,7 @@
               <div class="footer-row centered vertical">
                 <div class="footer-info centered">
                   <a href="/" aria-current="page" class="footer-logo-link w-inline-block w--current">
-                    <img src="assets/images/resources/New Logo 2024.webp" width="225" alt="">
+                    <img src="assets/images/resources/New Logo 2024.webp" width="225" alt="New Logo 2024" loading="lazy">
                   </a>
                   <p class="text-center">
                     <strong>Hours of Operation:<br></strong>
@@ -714,8 +727,6 @@
     <!-- template scripts -->
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/formcontainer.js"></script>
-      <!-- video player -->
-    <script src="assets/js/videoplayer.js"></script>
 
 </body>
 </html>
