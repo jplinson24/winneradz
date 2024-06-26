@@ -2274,7 +2274,7 @@ a:visited {
 .pricing-one {
   padding-top: 110px;
   padding-bottom: 90px;
-  text-align: center;
+  text-align: left;
 }
 .pricing-one .switch {
   position: relative;
@@ -2371,9 +2371,9 @@ a:visited {
 
 
 .pricing-one__single {
-  padding-left: 40px;
+  padding-left: 0px;
   padding-right: 40px;
-  text-align: center;
+  text-align: left;
 }
 .pricing-one__single h3,
 .pricing-one__single p,
@@ -2405,7 +2405,7 @@ a:visited {
   margin-top: 50px;
   padding-top: 50px;
   margin-bottom: 50px;
-  text-align: center;
+  text-align: left;
 }
 .pricing-one__single ul li {
   color: #74727a;
@@ -2413,7 +2413,7 @@ a:visited {
   font-weight: 400;
   line-height: 1em;
   text-align: left;
-  padding-left: 100px;
+  padding-left: 20px;
 }
 .pricing-one__single ul li + li {
   margin-top: 30px;
@@ -2572,9 +2572,6 @@ a:visited {
 */
 .service-one {
   padding-bottom: 90px;
-   display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* Optional: Allows items to wrap onto the next line */
 }
 .service-one .container {
   position: relative;
@@ -2643,6 +2640,8 @@ a:visited {
   padding-top: 50px;
   padding-bottom: 35px;
 }
+
+
 .service-one__icon {
   width: 108px;
   height: 108px;
@@ -2664,6 +2663,38 @@ a:visited {
   color: #fff;
   font-size: 70px;
   margin-bottom: 30px;
+}
+.service-one [class*=col-]:nth-child(1) .service-one__single:before,
+.service-one [class*=col-]:nth-child(1) .service-one__icon {
+  background-mage: linear-gradient(40deg, #ff43c0 0%, #ffa95c 100%);
+}
+.service-one [class*=col-]:nth-child(1) .service-one__icon {
+  -webkit-box-shadow: 0px 20px 40px 0px rgba(255, 118, 142, 0.8);
+          box-shadow: 0px 20px 40px 0px rgba(255, 118, 142, 0.8);
+}
+.service-one [class*=col-]:nth-child(2) .service-one__single:before,
+.service-one [class*=col-]:nth-child(2) .service-one__icon {
+  background-image: linear-gradient(40deg, #0db8ff 0%, #f332ff 100%);
+}
+.service-one [class*=col-]:nth-child(2) .service-one__icon {
+  -webkit-box-shadow: 0px 20px 60px 0px rgba(141, 142, 255, 0.8);
+          box-shadow: 0px 20px 60px 0px rgba(141, 142, 255, 0.8);
+}
+.service-one [class*=col-]:nth-child(3) .service-one__single:before,
+.service-one [class*=col-]:nth-child(3) .service-one__icon {
+  background-image: linear-gradient(40deg, #39aeff 0%, #3cff53 100%);
+}
+.service-one [class*=col-]:nth-child(3) .service-one__icon {
+  -webkit-box-shadow: 0px 20px 40px 0px rgba(58, 212, 173, 0.8);
+          box-shadow: 0px 20px 40px 0px rgba(58, 212, 173, 0.8);
+}
+.service-one [class*=col-]:nth-child(4) .service-one__single:before,
+.service-one [class*=col-]:nth-child(4) .service-one__icon {
+  background-image: linear-gradient(40deg, #ff703e 0%, #ffec4e 100%);
+}
+.service-one [class*=col-]:nth-child(4) .service-one__icon {
+  -webkit-box-shadow: 0px 20px 40px 0px rgba(255, 178, 71, 0.8);
+          box-shadow: 0px 20px 40px 0px rgba(255, 178, 71, 0.8);
 }
 
 /* Adjust styles for the first item */
@@ -2697,6 +2728,12 @@ a:visited {
   max-width: 33%;
 }
 
+@media (max-width: 768px) {
+  .col-lg-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
 
 
 
@@ -2704,8 +2741,8 @@ a:visited {
 * 17. app-shot styles
 */
 .app-shot-one {
-  padding-top: 10px;
-  padding-bottom: 150px;
+  padding-top: 120px;
+  padding-bottom: 115px;
   position: relative;
 }
 .app-shot-one__bg {
@@ -2717,7 +2754,6 @@ a:visited {
   max-width: 1595px;
   width: 100%;
   position: relative;
-  padding-top: -500px;
 }
 .app-shot-one .app-shot-one__carousel {
   padding-top: 100.5px;
@@ -2731,7 +2767,7 @@ a:visited {
   left: 50%;
   -webkit-transform: translate(-50%, -49%) scaleY(1);
           transform: translate(-50%, -49%) scaleY(1);
-  background-image: url(../images/app-shots/app-screen-moc.webp);
+  background-image: url(../images/app-shots/app-screen-moc.png);
   background-position: center center;
   background-repeat: no-repeat;
   width: 423px;
@@ -2776,18 +2812,18 @@ a:visited {
   -webkit-transform: scale(1.285);
           transform: scale(1.285);
 }
-.app-shot-one .owl-item img {
-  -webkit-transition: -webkit-transform .4s ease;
-  transition: -webkit-transform .4s ease;
-  transition: transform .4s ease;
-  transition: transform .4s ease, -webkit-transform .4s ease;
+.app-shot-one .app-shot-one__carousel video {
+  width: 100%; /* Make videos fill the container width */
+  height: auto; /* Maintain aspect ratio */
 }
-.app-shot-one .owl-item video {
-  -webkit-transition: -webkit-transform .4s ease;
-  transition: -webkit-transform .4s ease;
-  transition: transform .4s ease;
-  transition: transform .4s ease, -webkit-transform .4s ease;
+
+/* Optional: Add media queries for smaller screens */
+@media (max-width: 768px) {
+  .app-shot-one .app-shot-one__carousel video {
+    /* Adjust styles for smaller screens */
+  }
 }
+
 
 
 /*
@@ -2906,7 +2942,7 @@ a:visited {
   width: 100%;
   border: 4px solid #e9eef1;
   border-radius: 10px;
-  transition: all .2s;
+  transition: all 0.2s;
   box-shadow: 0 0 27px 2px #bdc4c9;
 }
 /*
