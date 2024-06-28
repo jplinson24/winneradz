@@ -1,77 +1,83 @@
 /* Form Container */
 .form-container {
-    background: linear-gradient(to bottom right, #ff8a00, #e52e71);
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 80%; /* Adjusted width */
-    height: auto;
-    margin: 0 auto;
-    text-align: center; /* Center content */
-    color: #fff;
-    overflow: hidden; /* Hide overflow */
-    z-index: 10;
+  background: linear-gradient(to bottom right, #ff8a00, #e52e71);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 80%; /* Adjusted width */
+  height: auto;
+  margin: 0 auto;
+  text-align: center; /* Center content */
+  color: #fff;
+  overflow: hidden; /* Hide overflow */
+  z-index: 10;
 }
 
+/* Error Message */
+.error-message {
+  color: red;
+  font-size: 12px;
+  display: none; /* Initially hide the error messages */
+}
 
 /* Input Fields */
 .input {
-    width: calc(100% - 24px); /* Adjust width */
-    padding: 12px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.3);
-    color: #333;
+  width: calc(100% - 24px); /* Adjust width */
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #333;
 }
 
 /* Input Label */
 .input-container label {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    color: #fff;
-    transition: 0.3s;
-    pointer-events: none;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #fff;
+  transition: 0.3s;
+  pointer-events: none;
 }
 
 /* Placeholder */
 .input::placeholder {
-    color: #fff;
+  color: #fff;
 }
 
 /* Close Button */
 .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
 }
 
 /* Submit Button */
 .submit-btn {
-    width: 80%;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ff8350; /* Adjusted button color */
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  width: 80%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff8350; /* Adjusted button color */
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .submit-btn:hover {
-    background-color: #d52a5e; /* Change background color on hover */
+  background-color: #d52a5e; /* Change background color on hover */
 }
 
 .formhead {
-    text-align: center;
-    margin: 0 auto;
+  text-align: center;
+  margin: 0 auto;
 }

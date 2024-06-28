@@ -107,30 +107,35 @@
                         <!-- Close button -->
 
                         <!-- FORM -->
-                      <!-- FORM -->
-                        <div class="input-container">
-                            <input type="text" name="Complete Name" class="input" placeholder="Complete Name*" required />
-                        </div>
-                        <div class="input-container">
-                            <input type="email" name="email" class="input" placeholder="Email*" required />
-                        </div>
-                        <div class="input-container">
-                            <p>Fill up this form to place an order...</p>
-                            <div class="textarea-container">
-                                <button type="submit" class="submit-btn" formaction="URL_of_your_Google_Form">Order Form</button>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="input-container">
-                            <p>Otherwise,</p>
-                            <div class="textarea-container">
-                                <textarea name="Otherwise, " class="input" placeholder="Feel free to send your inquiry here..."></textarea>
-                            </div>
-                        </div>
-                        <!-- FORM -->
+                     
+<!-- FORM -->
+<form id="inquiryForm">
+    <div class="input-container">
+        <input type="text" id="nameInput" name="Complete Name" class="input" placeholder="Complete Name*" required />
+        <p id="nameError" class="error-message">Please fill out this field.</p>
+    </div>
+    <div class="input-container">
+        <input type="email" id="emailInput" name="email" class="input" placeholder="Email*" required />
+        <p id="emailError" class="error-message">Please fill out this field.</p>
+    </div>
+    <div class="input-container">
+        <p>Fill up this form to place an order...</p>
+        <div class="textarea-container">
+            <button type="button" id="orderFormButton" class="submit-btn" formaction="https://docs.google.com/forms/d/e/1FAIpQLSd94t7fZWR_74r-dQAdMtXTab0EgOyv__W1Pep7-OOJuaNFpg/viewform">Order Form</button>
+        </div>
+    </div>
+    <br>
+    <div class="input-container">
+        <p>Otherwise,</p>
+        <div class="textarea-container">
+            <textarea name="Otherwise, " class="input" placeholder="Feel free to send your inquiry here..."></textarea>
+        </div>
+    </div>
+    <!-- FORM -->
 
-                        <button type="submit" class="submit-btn">Send my Inquiry</button>
-                        <!-- Submit Button -->
+    <button type="submit" id="submitButton" class="submit-btn">Send my Inquiry</button>
+</form>
+
                     </div>
             </nav>
         </header><!-- /.site-header -->
