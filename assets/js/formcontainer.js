@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var buttons = document.querySelectorAll(".show-form-button");
   var formContainer = document.getElementById("formContainer");
   var closeButton = document.getElementById("closeButton");
+  var orderFormButton = document.getElementById("orderFormButton");
 
   // Initially hide the form container
   formContainer.style.display = "none";
@@ -23,55 +24,15 @@ document.addEventListener("DOMContentLoaded", function () {
     formContainer.style.display = "none";
   });
 
-  // Functionality for submit button enable/disable
-  var nameInput = document.getElementById("nameInput");
-  var emailInput = document.getElementById("emailInput");
-  var submitButton = document.getElementById("submitButton");
-  var nameError = document.getElementById("nameError");
-  var emailError = document.getElementById("emailError");
+  // Add click event listener to the "Order Form" button
+  orderFormButton.addEventListener("click", function (event) {
+    // Prevent default form submission behavior
+    event.preventDefault();
 
-  function toggleSubmitButton() {
-    submitButton.disabled =
-      nameInput.value.trim() === "" || emailInput.value.trim() === "";
-  }
+    // Get the form action URL from the button attribute
+    var formAction = orderFormButton.getAttribute("formaction");
 
-  nameInput.addEventListener("input", function () {
-    nameError.style.display = nameInput.value.trim() === "" ? "block" : "none";
-    toggleSubmitButton();
-  });
-
-  emailInput.addEventListener("input", function () {
-    emailError.style.display =
-      emailInput.value.trim() === "" ? "block" : "none";
-    toggleSubmitButton();
-  });
-
-  // Validate form on submit
-  var inquiryForm = document.getElementById("inquiryForm");
-  inquiryForm.addEventListener("submit", function (event) {
-    var valid = true;
-
-    if (nameInput.value.trim() === "") {
-      nameError.style.display = "block";
-      valid = false;
-    }
-
-    if (emailInput.value.trim() === "") {
-      emailError.style.display = "block";
-      valid = false;
-    }
-
-    if (!valid) {
-      event.preventDefault();
-    }
-  });
-
-  // Open Google Form in a new tab
-  var orderFormButton = document.getElementById("orderFormButton");
-  orderFormButton.addEventListener("click", function () {
-    window.open(
-      "https://docs.google.com/forms/d/e/1FAIpQLSd94t7fZWR_74r-dQAdMtXTab0EgOyv__W1Pep7-OOJuaNFpg/viewform",
-      "_blank"
-    );
+    // Open the Google Form in a new tab
+    window.open(formAction, "_blank");
   });
 });

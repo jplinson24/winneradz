@@ -14,13 +14,6 @@
   z-index: 10;
 }
 
-/* Error Message */
-.error-message {
-  color: red;
-  font-size: 12px;
-  display: none; /* Initially hide the error messages */
-}
-
 /* Input Fields */
 .input {
   width: calc(100% - 24px); /* Adjust width */
@@ -65,19 +58,50 @@
   padding: 12px;
   border: none;
   border-radius: 5px;
-  background-color: #ff8350; /* Adjusted button color */
+  background-color: #ff8350;
   color: #fff;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
+  text-decoration: none;
 }
 
 .submit-btn:hover {
-  background-color: #d52a5e; /* Change background color on hover */
+  background-color: #d52a5e;
+  color: #fff; /* Ensure text remains white on hover */
 }
 
 .formhead {
   text-align: center;
   margin: 0 auto;
+}
+
+.google-form {
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff8350;
+  margin-left: 30px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  display: block;
+}
+
+.google-form:hover {
+  background-color: #d52a5e;
+  color: #fff; /* Ensure text remains white on hover */
+  display: block; /* Make the anchor a block-level element */
+}
+
+.google-form a {
+  display: block; /* Make the anchor a block-level element */
+  color: #fff;
+  text-decoration: none;
+  padding: 12px;
+  z-index: 10;
 }
