@@ -39,4 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", function () {
     formContainer.style.display = "none";
   });
+
+  // Add keydown event listener for the Escape key
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      formContainer.style.display = "none";
+    }
+  });
 });
